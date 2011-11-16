@@ -3,6 +3,7 @@
 	http://reactivision.sourceforge.net/
 
 	Copyright (c) 2005-2009 Martin Kaltenbrunner <mkalten@iua.upf.edu>
+	Copyright (c) 2011 Andreas Willich <sabotageandi@gmail.com>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -40,6 +41,10 @@ public class TuioMouse implements TuioListener {
 			mouse = tcur.getSessionID();
 			if (robot!=null) robot.mouseMove(tcur.getScreenX(width),tcur.getScreenY(height));
 			if (robot!=null) robot.mousePress(InputEvent.BUTTON1_MASK);
+		}
+		else
+		{
+			if (robot!=null) robot.mousePress(InputEvent.BUTTON2_MASK);
 		}
 	}
 
