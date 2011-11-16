@@ -44,7 +44,8 @@ public class TuioMouse implements TuioListener {
 		}
 		else
 		{
-			if (robot!=null) robot.mousePress(InputEvent.BUTTON2_MASK);
+			if (robot != null) robot.mouseRelease(InputEvent.BUTTON1_MASK);
+			if (robot != null) robot.mousePress(InputEvent.BUTTON2_MASK);
 		}
 	}
 
